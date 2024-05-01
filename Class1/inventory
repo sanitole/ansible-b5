@@ -1,0 +1,6 @@
+[devops]
+master ansible_host=104.131.66.44
+
+worker1 ansible_host=104.131.76.172
+[qa]
+worker2 ansible_host=104.131.76.137
