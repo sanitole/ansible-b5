@@ -1,0 +1,22 @@
+- hosts: all
+  tasks: 
+  - name: Install packeges
+    yum:
+      name: httpd
+      state: latest
+    notify: Restart apache
+
+  - name: Install wget
+    yum:
+      name: wget
+    notify: Create group
+
+  handlers:
+  - name: Restart apache
+    service:
+      name: httpd
+      state: restarted
+
+  - name: Create group
+    group:
+      name: devops
