@@ -1,0 +1,8 @@
+- hosts: all 
+  tasks: 
+  roles: 
+    - apache
+    - packages
+    - php
+    - wordpress
+    - db
